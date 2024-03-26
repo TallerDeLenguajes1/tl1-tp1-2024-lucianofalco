@@ -17,6 +17,6 @@ int main(int argc, char const *argv[])
     printf ("\nEl valor es : %d\n" , valor);
     printf ("\nY su direccion de memoria es: %p\n" , p_valor);
     printf ("\nEl tamanio de memoria utilizado por la variable es: %d bytes\n" , sizeof(valor));
-    printf ("\nEl tamanio de memoria del puntero es: %d bytes\n" , sizeof(p_valor));
+    printf ("\nEl tamanioo de memoria del puntero es: %d bytes\n" , sizeof(p_valor));
     return 0;
 }
