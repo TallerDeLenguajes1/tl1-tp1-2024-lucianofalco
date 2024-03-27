@@ -8,15 +8,33 @@ variable de algún tipo y muestre por pantalla lo siguiente:
 5) el tamaño de memoria utilizado por esa variable usando la
 función sizeof()
 */
+
+int cuadrado(int numero); 
+void cuadrad(int numero);
+void MostrarDireccion(int *numero);
+void tamanio(int *numero);
+
 int main(int argc, char const *argv[])
 {
-    printf("Hola mundo");
-    int valor = 10;
-    int *p_valor = &valor;
+    int numero , resultado, *p_num ;
+     printf("\nEscriba un numero\n");
+     scanf("%d" , &numero);
+     //cuadrad(numero);
+    MostrarDireccion(&numero);
 
-    printf ("\nEl valor es : %d\n" , valor);
-    printf ("\nY su direccion de memoria es: %p\n" , p_valor);
-    printf ("\nEl tamanio de memoria utilizado por la variable es: %d bytes\n" , sizeof(valor));
-    printf ("\nEl tamanioo de memoria del puntero es: %d bytes\n" , sizeof(p_valor));
     return 0;
+}
+int cuadrado(int numero){
+    return numero*numero ;
+} 
+void cuadrad(int numero){
+    printf("\n El cuadrado de %d es : %d \n ", numero , numero*numero);
+}
+void MostrarDireccion(int *numero){
+     printf("La direccion de memoria de la variable %d es %p\n" , *numero , numero);
+     printf("La direccion de memoria del  puntero de la variable %d es %p\n" , *numero , &numero);
+
+}
+void tamanio(int *numero){
+    printf("\nEl tamaño de la variable %d es: %d\n" , *numero , sizeof(*numero));
 }
